@@ -12,7 +12,7 @@
     <header>
       <nav class="navbar">
         <ul class="menu">
-          <li><a href="#" class="nav-link glow">prueba git 1</a></li>
+          <li><a href="#" class="nav-link glow">Inicio</a></li>
           <li><a href="#Nosotros" class="nav-link glow">Nosotros</a></li>
           <li><a href="#experiencia" class="nav-link glow">Experiencia</a></li>
           <li><a href="#servicios2" class="nav-link glow">Servicios</a></li>
@@ -499,96 +499,68 @@
       </div>
     </section>
 
-    <section class="cuestionario">
-      <div class="container">
-        <h2>CONTACTO</h2>
+    <section class="contact-section">
+      <div class="contact-wrapper">
+        <!-- FORMULARIO -->
+        <div class="form-box">
+          <div class="container">
+            <h2>CONTACTO</h2>
 
-        <form id="contactForm">
-          <div class="form-group">
-            <input type="text" id="nombre" placeholder="Nombre" />
-            <small></small>
+            <form id="contactForm">
+              <div class="form-group">
+                <input type="text" id="nombre" placeholder="Nombre" />
+                <small></small>
+              </div>
+
+              <div class="form-group">
+                <input type="text" id="apellido" placeholder="Apellido" />
+                <small></small>
+              </div>
+
+              <div class="form-group">
+                <input type="text" id="cargo" placeholder="Cargo" />
+                <small></small>
+              </div>
+
+              <div class="form-group">
+                <input type="text" id="empresa" placeholder="Empresa" />
+                <small></small>
+              </div>
+
+              <div class="form-group">
+                <input type="text" id="telefono" placeholder="Teléfono" />
+                <small></small>
+              </div>
+
+              <div class="form-group">
+                <input type="email" id="correo" placeholder="Correo" />
+                <small></small>
+              </div>
+
+              <div class="form-group">
+                <textarea
+                  id="mensaje"
+                  rows="4"
+                  placeholder="Mensaje"
+                ></textarea>
+                <small></small>
+              </div>
+
+              <button type="submit">ENVIAR</button>
+            </form>
           </div>
+        </div>
 
-          <div class="form-group">
-            <input type="text" id="apellido" placeholder="Apellido" />
-            <small></small>
-          </div>
-
-          <div class="form-group">
-            <input type="text" id="cargo" placeholder="Cargo" />
-            <small></small>
-          </div>
-
-          <div class="form-group">
-            <input type="text" id="empresa" placeholder="Empresa" />
-            <small></small>
-          </div>
-
-          <div class="form-group">
-            <input type="text" id="telefono" placeholder="Teléfono" />
-            <small></small>
-          </div>
-
-          <div class="form-group">
-            <input type="email" id="correo" placeholder="Correo" />
-            <small></small>
-          </div>
-
-          <div class="form-group">
-            <textarea id="mensaje" rows="4" placeholder="Mensaje"></textarea>
-            <small></small>
-          </div>
-
-          <button type="submit">ENVIAR</button>
-        </form>
+        <!-- MAPA -->
+        <div class="map-box">
+          <iframe
+            src="https://www.google.com/maps?q=-11.9644059,-76.9951325&hl=es&z=18&output=embed"
+            allowfullscreen
+            loading="lazy"
+          >
+          </iframe>
+        </div>
       </div>
-
-      <script>
-        const form = document.getElementById("contactForm");
-
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          validarCampo("nombre");
-          validarCampo("apellido");
-          validarCampo("cargo");
-          validarCampo("empresa");
-          validarCampo("telefono");
-          validarCorreo("correo");
-          validarCampo("mensaje");
-        });
-
-        function validarCampo(id) {
-          const input = document.getElementById(id);
-          const small = input.nextElementSibling;
-
-          if (input.value.trim() === "") {
-            input.classList.add("error");
-            input.classList.remove("success");
-            small.innerText = "Este campo es obligatorio";
-          } else {
-            input.classList.remove("error");
-            input.classList.add("success");
-            small.innerText = "";
-          }
-        }
-
-        function validarCorreo(id) {
-          const input = document.getElementById(id);
-          const small = input.nextElementSibling;
-          const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-          if (!regex.test(input.value)) {
-            input.classList.add("error");
-            input.classList.remove("success");
-            small.innerText = "Correo inválido";
-          } else {
-            input.classList.remove("error");
-            input.classList.add("success");
-            small.innerText = "";
-          }
-        }
-      </script>
     </section>
     <script>
       emailjs.init("NPzxwujRv5UQtx9qw");
@@ -619,6 +591,52 @@
             console.log(error);
           });
       });
+    </script>
+    <script>
+      const form = document.getElementById("contactForm");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        validarCampo("nombre");
+        validarCampo("apellido");
+        validarCampo("cargo");
+        validarCampo("empresa");
+        validarCampo("telefono");
+        validarCorreo("correo");
+        validarCampo("mensaje");
+      });
+
+      function validarCampo(id) {
+        const input = document.getElementById(id);
+        const small = input.nextElementSibling;
+
+        if (input.value.trim() === "") {
+          input.classList.add("error");
+          input.classList.remove("success");
+          small.innerText = "Este campo es obligatorio";
+        } else {
+          input.classList.remove("error");
+          input.classList.add("success");
+          small.innerText = "";
+        }
+      }
+
+      function validarCorreo(id) {
+        const input = document.getElementById(id);
+        const small = input.nextElementSibling;
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!regex.test(input.value)) {
+          input.classList.add("error");
+          input.classList.remove("success");
+          small.innerText = "Correo inválido";
+        } else {
+          input.classList.remove("error");
+          input.classList.add("success");
+          small.innerText = "";
+        }
+      }
     </script>
   </body>
 </html>
