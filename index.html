@@ -8,36 +8,7 @@
   </head>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-  <script>
-    emailjs.init("NPzxwujRv5UQtx9qw");
 
-    const form1 = document.getElementById("contactForm");
-
-    form1.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const datos = {
-        nombre: document.getElementById("nombre").value,
-        apellido: document.getElementById("apellido").value,
-        cargo: document.getElementById("cargo").value,
-        empresa: document.getElementById("empresa").value,
-        telefono: document.getElementById("telefono").value,
-        correo: document.getElementById("correo").value,
-        mensaje: document.getElementById("mensaje").value,
-      };
-
-      emailjs
-        .send("service_brlvxv3", "template_2iljuvm", datos)
-        .then(function () {
-          alert("Mensaje enviado correctamente 🚀");
-          form1.reset();
-        })
-        .catch(function (error) {
-          alert("Error al enviar. Intenta nuevamente.");
-          console.log(error);
-        });
-    });
-  </script>
 
   <body>
     <header>
@@ -58,7 +29,7 @@
 
       <div class="carousel-container">
         <div class="slide">
-          <img src="/img/fonfd.jpg" />
+          <img src="img/fonfd.jpg" />
 
           <!-- POSICIÓN DEL TEXTO: middle / bottom / top -->
           <div class="slide-text middle">
@@ -73,7 +44,7 @@
         </div>
 
         <div class="slide">
-          <img src="/img/carrusel2ph.jpg" />
+          <img src="img/carrusel2ph.jpg" />
 
           <!-- este abajo -->
           <div class="slide-text top" id="mision">
@@ -88,7 +59,7 @@
         </div>
 
         <div class="slide">
-          <img src="/img/logo reducido.webp" />
+          <img src="img/logo reducido.webp" />
 
           <!-- este arriba -->
           <div class="slide-text top">
@@ -105,7 +76,7 @@
       <button class="btn-right">❯</button>
     </div>
 
-    <script src="/prueba1carrusel/jscarrusel.js"></script>
+    <script src="prueba1carrusel/jscarrusel.js"></script>
 
     <div class="base-principal">
       <div class="card-servicios">
@@ -114,17 +85,17 @@
 
         <div class="servicios">
           <div class="item-servicio">
-            <img src="/img/icono1.jpg" class="icono" />
+            <img src="img/icono1.jpg" class="icono" />
             <h3>Proyectos de Instalaciones Eléctricas y Sanitarias</h3>
           </div>
 
           <div class="item-servicio">
-            <img src="/img/icono 2.png" class="icono" />
+            <img src="img/icono 2.png" class="icono" />
             <h3>Mantenimiento Integral de Infraestructura</h3>
           </div>
 
           <div class="item-servicio">
-            <img src="/img/icono 3.png" class="icono" />
+            <img src="img/icono 3.png" class="icono" />
             <h3>Supervisión, Inspección y Certificación de Sistemas</h3>
           </div>
         </div>
@@ -161,7 +132,7 @@
       </div>
       <div class="imagen_foto_grupal">
         <img
-          src="/img/nosotros/foto grupal.png"
+          src="img/nosotros/foto grupal.png"
           alt="imagen_grupal"
           class="img_nosotros"
         />
@@ -249,7 +220,7 @@
           NUESTRA<br />EXPERIENCIA <br />
           LABORAL
         </h2>
-        <img src="/img/logo reducido.webp" alt="Logo" />
+        <img src="img/logo reducido.webp" alt="Logo" />
       </div>
 
       <div class="timeline">
@@ -354,7 +325,7 @@
     </section>
 
     <div class="servicios2" id="servicios2">
-      <img src="/img/ENCABEZADOSERVICIOS.png" alt="servicio" />
+      <img src="img/ENCABEZADOSERVICIOS.png" alt="servicio" />
       <h2 class="NUESTROS-SERVICIOS2">-- NUESTROS SERVICIOS --</h2>
     </div>
     <section class="serviciosbody" id="serviciosbody">
@@ -365,7 +336,7 @@
           rel="noopener noreferrer"
         >
           <div class="itemservicio">
-            <img src="/img/construccion civil.jpeg" alt="" />
+            <img src="img/construccion civil.jpeg" alt="" />
             <h3>CONSTRUCCIÓN CIVIL</h3>
             <p>
               Diseño y ejecución de obras civiles, abarcando desde trabajos de
@@ -381,7 +352,7 @@
           rel="noopener noreferrer"
         >
           <div class="itemservicio">
-            <img src="/img/sistema de bombeo.jpg" alt="" />
+            <img src="img/sistema de bombeo.jpg" alt="" />
             <h3>SISTEMAS DE BOMBEO</h3>
             <p>
               Diseño, suministro e instalación de sistemas de bombeo para redes
@@ -396,7 +367,7 @@
           rel="noopener noreferrer"
         >
           <div class="itemservicio">
-            <img src="/img/mantenimiento.jpg" alt="" />
+            <img src="img/mantenimiento.jpg" alt="" />
             <h3>MANTENIMIENTO</h3>
             <p>
               Mantenimiento preventivo y correctivo de instalaciones sanitarias.
@@ -434,7 +405,7 @@
           rel="noopener noreferrer"
         >
           <div class="itemservicio">
-            <img src="/img/sumionistro sanitario.jpg" alt="" />
+            <img src="img/sumionistro sanitario.jpg" alt="" />
             <h3>SUMINISTRO SANITARIO</h3>
             <p>
               Suministro de equipos y materiales para sistemas de instalaciones
@@ -448,7 +419,7 @@
           rel="noopener noreferrer"
         >
           <div class="itemservicio">
-            <img src="/img/proyectos electricos.jpg" alt="" />
+            <img src="img/proyectos electricos.jpg" alt="" />
             <h3>PROYECTOS ELÉCTRICOS</h3>
             <p>
               Diseño y ejecución integral de proyectos eléctricos de baja y
@@ -464,7 +435,7 @@
           rel="noopener noreferrer"
         >
           <div class="itemservicio">
-            <img src="/img/instalaciones-sanitarias3.jpg" alt="" />
+            <img src="img/instalaciones-sanitarias3.jpg" alt="" />
             <h3>REDES SANITARIAS</h3>
             <p>
               Instalación de redes interiores y exteriores de agua y desagüe
@@ -480,7 +451,7 @@
           rel="noopener noreferrer"
         >
           <div class="itemservicio">
-            <img src="/img/transformadores.jpg" alt="" />
+            <img src="img/transformadores.jpg" alt="" />
             <h3>TRANSFORMADORES</h3>
             <p>
               Mantenimiento preventivo y correctivo de motores eléctricos y
@@ -494,7 +465,7 @@
           rel="noopener noreferrer"
         >
           <div class="itemservicio">
-            <img src="/img/redesdegas.jpg" alt="" />
+            <img src="img/redesdegas.jpg" alt="" />
             <h3>REDES DE GAS</h3>
             <p>
               Diseño e instalación de sistemas de distribución de gas,
@@ -508,7 +479,7 @@
           rel="noopener noreferrer"
         >
           <div class="itemservicio">
-            <img src="/img/sistemacontraincendios.jpg" alt="" />
+            <img src="img/sistemacontraincendios.jpg" alt="" />
             <h3>SISTEMAS CONTRA INCENDIOS</h3>
             <p>
               Diseño y ejecución de proyectos integrales de sistemas de
@@ -621,6 +592,37 @@
         }
       </script>
     </section>
+      <script>
+    emailjs.init("NPzxwujRv5UQtx9qw");
+
+    const form1 = document.getElementById("contactForm");
+
+    form1.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const datos = {
+        nombre: document.getElementById("nombre").value,
+        apellido: document.getElementById("apellido").value,
+        cargo: document.getElementById("cargo").value,
+        empresa: document.getElementById("empresa").value,
+        telefono: document.getElementById("telefono").value,
+        correo: document.getElementById("correo").value,
+        mensaje: document.getElementById("mensaje").value,
+      };
+
+      emailjs
+        .send("service_brlvxv3", "template_2iljuvm", datos)
+        .then(function () {
+          alert("Mensaje enviado correctamente 🚀");
+          form1.reset();
+        })
+        .catch(function (error) {
+          alert("Error al enviar. Intenta nuevamente.");
+          console.log(error);
+        });
+    });
+  </script>
   </body>
 </html>
+
 
