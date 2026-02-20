@@ -747,17 +747,15 @@ body {
 }
 
 .itemservicio {
+  align-items: center;
+  overflow: hidden;
+  justify-content: flex-start;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  height: 100%;
   transition:
     opacity 0.35s ease,
     width 0.35s ease;
-  opacity: 0.5;
-}
-
-.itemservicio:hover {
-  opacity: 1;
 }
 
 .itemservicio p {
@@ -779,11 +777,14 @@ body {
 }
 .grid-serviciosA,
 .grid-serviciosN {
+  align-items: center;
   text-align: center;
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 35px;
+  width: 100%;
+  height: 32rem;
 }
 
 .grid-serviciosA {
@@ -796,7 +797,6 @@ body {
   color: #ff7b00;
 }
 .grid-serviciosA h1 {
-  margin: 10px;
   text-shadow: 0 0 15px #7a3b00;
   color: #ff7b00;
   font-size: 2.5rem; /* más grande que un h1 */
@@ -804,21 +804,20 @@ body {
   text-align: center;
 }
 .grid-serviciosA:hover h1 {
-  font-size: 2.6rem;
+  text-shadow: 0 0 35px #c4640b;
 }
 .grid-serviciosN:hover h1 {
-  font-size: 2.55rem;
+  text-shadow: 0 0 15px #89b8ff;
 }
 
 .grid-serviciosN a h3 {
-  text-shadow: 0 0 1px #070d35;
   font-size: 1.3rem;
-  color: #0066ff;
+  color: #0f2f66;
 }
 .grid-serviciosN h1 {
   text-align: center;
-  text-shadow: 0 0 1.9px #031c42;
-  color: #0066ff;
+
+  color: #0f2f66;
   font-size: 2.5rem; /* más grande que un h1 */
   font-weight: 800;
 }
@@ -829,11 +828,63 @@ body {
 .grid-serviciosA p {
   color: white;
 }
-
+/*
+.grid-serviciosA p,
+.grid-serviciosN p {
+  opacity: 0;
+}
+*/
 .serviciosbody img {
   width: 100%;
   height: 220px;
   object-fit: cover;
+}
+.itemservicio {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra cuando está cerrado */
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.itemservicio img {
+  transition: transform 0.5s ease;
+}
+
+.itemservicio h3 {
+  margin: 15px 0;
+  transition: transform 0.5s ease;
+}
+
+/* Texto oculto inicialmente */
+.itemservicio p {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+/* Hover */
+.itemservicio:hover {
+  box-shadow: 0 0 23px #ffffff;
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+
+.itemservicio:hover img {
+  transform: translateY(-10px);
+}
+
+.itemservicio:hover h3 {
+  transform: translateY(-10px);
+}
+
+.itemservicio:hover p {
+  max-height: 200px; /* suficiente para tu texto */
+  opacity: 1;
+  margin-top: 10px;
 }
 
 .prueba {
