@@ -827,7 +827,8 @@ body {
   background: linear-gradient(180deg, #ff7b00, #b45d0c);
   padding-top: 20px;
 }
-.grid-serviciosA p {
+.grid-serviciosA p,
+.grid-serviciosN p {
   color: white;
 }
 /*
